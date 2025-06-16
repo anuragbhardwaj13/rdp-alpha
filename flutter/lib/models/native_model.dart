@@ -60,7 +60,8 @@ class PlatformFFI {
   }
 
   bool registerEventHandler(
-      String eventName, String handlerName, HandleEvent handler, {bool replace = false}) {
+      String eventName, String handlerName, HandleEvent handler,
+      {bool replace = false}) {
     debugPrint('registerEventHandler $eventName $handlerName');
     var handlers = _eventHandlers[eventName];
     if (handlers == null) {
@@ -154,7 +155,7 @@ class PlatformFFI {
       try {
         if (isAndroid) {
           // only support for android
-          _homeDir = (await ExternalPath.getExternalStorageDirectories())[0];
+          _homeDir = (await ExternalPath.getExternalStorageDirectories())![0];
         } else if (isIOS) {
           _homeDir = _ffiBind.mainGetDataDirIos();
         } else {
