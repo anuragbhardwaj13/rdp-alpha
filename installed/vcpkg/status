@@ -1,0 +1,219 @@
+Package: vcpkg-cmake-config
+Version: 2024-05-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f4ef55adce0b8356c835fb3d3b315953881b2899020fb325922e8dd906d1ff17
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2024-04-23
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 502dcf148f10a388b4e51e92600d4bd2827d203ece61e7728aa2c38893995944
+Status: install ok installed
+
+Package: aom
+Version: 3.11.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 0ef0e9618b3226be1ea1676e0e2a1801933ff2883158a3a4d327a1014e3080de
+Description: AV1 codec library
+Status: install ok installed
+
+Package: aom
+Version: 3.11.0
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static
+Multi-Arch: same
+Abi: 70bc6ff1343f8c273023bfec521c1167001737e52dfbdf326fafb328ae66ca8e
+Description: AV1 codec library
+Status: install ok installed
+
+Package: mfx-dispatch
+Version: 1.35.1
+Port-Version: 5
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c89adeb7db03302bfff07d0f426ebbc5f905345356f49138e8907d3fa20a7513
+Description: Open source Intel media sdk dispatcher
+Status: install ok installed
+
+Package: ffnvcodec
+Version: 12.1.14.0
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 1f7bd01467097673eee1fa931f59006255097fdc779bfa805e362eb472c739a6
+Description: FFmpeg version of Nvidia Codec SDK headers.
+Status: install ok installed
+
+Package: vcpkg-cmake-get-vars
+Version: 2024-09-22
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 546e8604e51183e800e60f294c6fcb1ed6ada5e52638f76b93d0402bc3fa860f
+Status: install ok installed
+
+Package: vcpkg-tool-meson
+Version: 1.6.1
+Depends: vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 699615925d8ceb4e47257195e19e2d092927cd930aa6f54a2b3291e7c6ff6e64
+Description: Meson build system
+Status: install ok installed
+
+Package: pkgconf
+Version: 2.3.0
+Depends: vcpkg-tool-meson
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 181f5f5ab0ef58b34e68078d6d9fa22bc8377877e4ee2303d3eaf72f76741640
+Description: pkgconf is a program which helps to configure compiler and linker flags for development libraries. It is similar to pkg-config from freedesktop.org.
+Status: install ok installed
+
+Package: vcpkg-pkgconfig-get-modules
+Version: 2024-04-03
+Depends: pkgconf
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 69d5918dd84f6a76909b931ebd8427512f9a0aa05f619f1aa37dfe4a12f19ebb
+Status: install ok installed
+
+Package: amd-amf
+Version: 1.4.35
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4e0e4833d6d4b764f9b57041213d5f620864e03f4c6321702ca1db0ca3d8e7d0
+Description: AMD Advanced Media Framework headers
+Status: install ok installed
+
+Package: ffmpeg
+Version: 7.1
+Port-Version: 1
+Depends: vcpkg-cmake-get-vars, vcpkg-pkgconfig-get-modules
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a4f21dcd3562c8815c0a54a15ecfb1940de38ff96ba01c3b1eb41fa1e6a4fc41
+Description: a library to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created.
+    FFmpeg is the leading multimedia framework, able to decode, encode, transcode, mux, demux, stream, filter and play pretty much anything that humans and machines have created. It supports the most obscure ancient formats up to the cutting edge. No matter if they were designed by some standards committee, the community or a corporation. It is also highly portable: FFmpeg compiles, runs, and passes our testing infrastructure FATE across Linux, Mac OS X, Microsoft Windows, the BSDs, Solaris, etc. under a wide variety of build environments, machine architectures, and configurations.
+Status: install ok installed
+
+Package: ffmpeg
+Feature: amf
+Depends: amd-amf
+Architecture: x64-windows
+Multi-Arch: same
+Description: AMD AMF codec support
+Status: install ok installed
+
+Package: ffmpeg
+Feature: nvcodec
+Depends: ffnvcodec
+Architecture: x64-windows
+Multi-Arch: same
+Description: Nvidia video decoding/encoding acceleration
+Status: install ok installed
+
+Package: ffmpeg
+Feature: qsv
+Depends: mfx-dispatch
+Architecture: x64-windows
+Multi-Arch: same
+Description: Intel QSV Codec
+Status: install ok installed
+
+Package: libjpeg-turbo
+Version: 3.1.0
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a181a37781890465ace78a8b7f14861296ccb0ea7b4c6cc5bfd402b79ad971b3
+Description: libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems.
+Status: install ok installed
+
+Package: libjpeg-turbo
+Version: 3.1.0
+Port-Version: 1
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static
+Multi-Arch: same
+Abi: 8df78b0918175e5e2a1ec640b523ec8f803c51e926a3ea061996c3ff7d567e0a
+Description: libjpeg-turbo is a JPEG image codec that uses SIMD instructions (MMX, SSE2, NEON, AltiVec) to accelerate baseline JPEG compression and decompression on x86, x86-64, ARM, and PowerPC systems.
+Status: install ok installed
+
+Package: vcpkg-msbuild
+Version: 2023-08-08
+Depends: vcpkg-cmake-get-vars, vcpkg-pkgconfig-get-modules
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 93b4215714ff1576aaa1afa0cbb6a68aafe8874373fe78ea5fefa5962a8e96bd
+Status: install ok installed
+
+Package: libvpx
+Version: 1.15.0
+Depends: vcpkg-cmake-get-vars, vcpkg-msbuild
+Architecture: x64-windows
+Multi-Arch: same
+Abi: c973a7da2c2820730d952df2d7ce7e13744cbf5c9e12e7a21c01288509002b41
+Description: The reference software implementation for the video coding formats VP8 and VP9.
+Status: install ok installed
+
+Package: libvpx
+Version: 1.15.0
+Depends: vcpkg-cmake-get-vars:x64-windows, vcpkg-msbuild:x64-windows
+Architecture: x64-windows-static
+Multi-Arch: same
+Abi: e966b6bc5c04ee3b29d85d69aa98675e1238821d76387dc5335412136a0b9c9c
+Description: The reference software implementation for the video coding formats VP8 and VP9.
+Status: install ok installed
+
+Package: libyuv
+Version: 1857
+Depends: libjpeg-turbo, vcpkg-cmake, vcpkg-cmake-config, vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: f207e0ada5d0ff6ce8411498ca6333effae6f0a84ff28745863b2abf557f9d9b
+Description: libyuv is an open source project that includes YUV scaling and conversion functionality
+Status: install ok installed
+
+Package: libyuv
+Version: 1857
+Depends: libjpeg-turbo, vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows, vcpkg-cmake-get-vars:x64-windows
+Architecture: x64-windows-static
+Multi-Arch: same
+Abi: 218bcda4bbf00f223d465d6e104d274b426bd9995a7bab56fe80071d82e4f94a
+Description: libyuv is an open source project that includes YUV scaling and conversion functionality
+Status: install ok installed
+
+Package: mfx-dispatch
+Version: 1.35.1
+Port-Version: 5
+Depends: vcpkg-cmake:x64-windows
+Architecture: x64-windows-static
+Multi-Arch: same
+Abi: f784a3e99489a70644de19005caa6d2085aeb6fb772d585e045332a5e41623bd
+Description: Open source Intel media sdk dispatcher
+Status: install ok installed
+
+Package: opus
+Version: 1.5.2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d514ce72193dc47dfb868652f38995159a4f6c18e7f6e08a0ff3ae2161739640
+Description: Totally open, royalty-free, highly versatile audio codec
+Status: install ok installed
+
+Package: opus
+Version: 1.5.2
+Depends: vcpkg-cmake:x64-windows, vcpkg-cmake-config:x64-windows
+Architecture: x64-windows-static
+Multi-Arch: same
+Abi: 31f3d995720f645236bb92d947ba0120ecac3e4d5a1e2127f1c8b57ed68ea117
+Description: Totally open, royalty-free, highly versatile audio codec
+Status: install ok installed
+
